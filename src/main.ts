@@ -1,20 +1,12 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import type { VercelRequest, VercelResponse } from '@vercel/node';
-
-let cachedServer: any;
-
-async function bootstrapServer() {
-  if (!cachedServer) {
-    const app = await NestFactory.create(AppModule);
-    app.enableCors();
-    await app.init();
-    cachedServer = app.getHttpAdapter().getInstance();
-  }
-  return cachedServer;
+import { config } from 'dotenv';
+config();
+// <-- load .env variables
+async function bootstrap() {
+  const app = await NestFactory.create(AppModule);
+  app.enableCors();
+  await app.listen(3000); // <-- start HTTP server
+  console.log('Server running on http://localhost:3000');
 }
-
-export default async function handler(req: VercelRequest, res: VercelResponse) {
-  const server = await bootstrapServer();
-  return server(req, res);
-}
+bootstrap();
