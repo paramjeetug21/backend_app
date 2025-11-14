@@ -13,9 +13,9 @@ export class GoogleStrategy extends PassportStrategy(Strategy, 'google') {
     private readonly jwtService: JwtService,
   ) {
     super({
-      clientID: process.env.GOOGLE_CLIENT_ID!,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
-      callbackURL: process.env.GOOGLE_CALLBACK_URL!,
+      clientID: '566457015052-o084ui720k7bnv4pq8e1915q4lc6o7uq.apps.googleusercontent.com',
+      clientSecret: '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',
+      callbackURL: 'https://backend-app-ashen.vercel.app/api/auth/google/callback',
       scope: ['profile', 'email'],
     });
   }
