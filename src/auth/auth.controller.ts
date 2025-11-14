@@ -1,6 +1,6 @@
 import { Controller, Post, Body, Get, Req, UseGuards } from '@nestjs/common';
 import { AuthService } from './auth.service';
-import { LoginDto, RegisterDto } from 'src/user/user.dto';
+import { LoginDto, RegisterDto } from '../user/user.dto';
 import { GoogleAuthGuard } from './guard/google-auth.guard';
 
 @Controller('auth')
