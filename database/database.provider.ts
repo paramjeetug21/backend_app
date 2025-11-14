@@ -1,7 +1,5 @@
 import { Sequelize } from 'sequelize-typescript';
 import { User } from 'src/user/user.entity';
-import { config } from 'dotenv';
-config();
 
 export const databaseProviders = [
   {
@@ -9,11 +7,11 @@ export const databaseProviders = [
     useFactory: async () => {
       const sequelize = new Sequelize({
         dialect: 'postgres',
-        host: process.env.DB_HOST,
+        host: 'aws-1-ap-southeast-1.pooler.supabase.com',
         port: 5432,
-        username: process.env.DB_USERNAME,
-        password: process.env.DB_PASSWORD,
-        database: process.env.DB_NAME,
+        username: 'postgres.lyoebknxanxqshedtwpr',
+        password: 'Abcd@1234',
+        database: 'postgres',
         dialectOptions: {
           ssl: {
             require: true,
