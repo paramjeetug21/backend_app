@@ -1,5 +1,10 @@
 import { Sequelize } from 'sequelize-typescript';
-import { User } from 'src/user/user.entity';
+import { User } from '../src/user/user.entity';
+import { Workspace } from 'src/workspace/workspace.entity';
+import { WorkspaceUser } from 'src/workspace_user/workspaceUser.entity';
+import { Document } from 'src/documents/documents.eneity';
+import { DocumentVersing } from 'src/documents/documents-version.entity';
+import { Notification } from 'src/workspace_user/notification.entity';
 
 export const databaseProviders = [
   {
@@ -20,7 +25,14 @@ export const databaseProviders = [
         },
       });
 
-      sequelize.addModels([User]);
+      sequelize.addModels([
+        User,
+        Workspace,
+        WorkspaceUser,
+        Document,
+        DocumentVersing,
+        Notification,
+      ]);
       await sequelize.sync();
 
       return sequelize;
