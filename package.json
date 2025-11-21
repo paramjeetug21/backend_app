@@ -65,6 +65,7 @@
     "@types/node": "^22.10.7",
     "@types/passport-google-oauth20": "^2.0.17",
     "@types/passport-jwt": "^4.0.1",
+    "@types/pg": "^8.15.6",
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",
     "@types/socket.io-client": "^1.4.36",
