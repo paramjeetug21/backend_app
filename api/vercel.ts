@@ -1,11 +1,11 @@
 import { NestFactory } from '@nestjs/core';
-import { AppModule } from '../src/app.module'; // <-- keep src for TS
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 
 let cachedServer: any;
 
 async function bootstrapServer() {
   if (!cachedServer) {
+    const { AppModule } = require('../dist/src/app.module.js');
     const app = await NestFactory.create(AppModule);
     app.enableCors();
     await app.init();
