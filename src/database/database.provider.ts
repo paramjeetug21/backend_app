@@ -1,5 +1,5 @@
 import { Sequelize } from 'sequelize-typescript';
-import { User } from '../src/user/user.entity';
+import { User } from '../user/user.entity';
 import { Workspace } from 'src/workspace/workspace.entity';
 import { WorkspaceUser } from 'src/workspace_user/workspaceUser.entity';
 import { Document } from 'src/documents/documents.eneity';
