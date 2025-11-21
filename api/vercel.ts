@@ -1,5 +1,5 @@
 import { NestFactory } from '@nestjs/core';
-import { AppModule } from '../src/app.module';
+import { AppModule } from '../src/app.module'; // <-- keep src for TS
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 
 let cachedServer: any;
