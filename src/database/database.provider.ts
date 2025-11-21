@@ -1,7 +1,7 @@
 import { Sequelize } from 'sequelize-typescript';
 import { User } from '../user/user.entity';
-import { Workspace } from 'src/workspace/workspace.entity';
-import { WorkspaceUser } from 'src/workspace_user/workspaceUser.entity';
+import { Workspace } from '../workspace/workspace.entity';
+import { WorkspaceUser } from '../workspace_user/workspaceUser.entity';
 import { Document } from 'src/documents/documents.eneity';
 import { DocumentVersing } from 'src/documents/documents-version.entity';
 import { Notification } from 'src/workspace_user/notification.entity';
