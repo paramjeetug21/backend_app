@@ -13,7 +13,6 @@ import { WorkspaceUserService } from './workspaceUser.service';
 import {
   AddUserByEmailDto,
   AddUserToWorkspaceDto,
-  UpdateNotificationDto,
   UpdateUserRoleDto,
 } from './workspaceUser.dto';
 import { JwtAuthGuard } from '../auth/guard/jwt.guard';
