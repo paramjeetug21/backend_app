@@ -8,7 +8,7 @@ import {
 } from 'sequelize-typescript';
 import { Document } from 'src/documents/documents.eneity';
 import { Workspace } from 'src/workspace/workspace.entity';
-import { WorkspaceUser } from 'src/workspace_user/workspaceUser.entity';
+import { WorkspaceUser } from '../workspace_user/workspaceUser.entity';
 
 @Table({
   tableName: 'users',

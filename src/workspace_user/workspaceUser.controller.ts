@@ -16,7 +16,7 @@ import {
   UpdateNotificationDto,
   UpdateUserRoleDto,
 } from './workspaceUser.dto';
-import { JwtAuthGuard } from 'src/auth/guard/jwt.guard';
+import { JwtAuthGuard } from '../auth/guard/jwt.guard';
 
 @Controller('workspace-users')
 @UseGuards(JwtAuthGuard)

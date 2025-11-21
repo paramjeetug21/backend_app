@@ -6,9 +6,9 @@ import {
 } from '@nestjs/common';
 import { WorkspaceUser } from './workspaceUser.entity';
 
-import { User } from 'src/user/user.entity';
+import { User } from '../user/user.entity';
 import { Notification } from './notification.entity';
-import { Workspace } from 'src/workspace/workspace.entity';
+import { Workspace } from '../workspace/workspace.entity';
 
 @Injectable()
 export class WorkspaceUserService {
