@@ -1,6 +1,6 @@
 import { Inject, Injectable, NotFoundException } from '@nestjs/common';
 import { Workspace } from './workspace.entity';
-import { WorkspaceUser } from 'src/workspace_user/workspaceUser.entity';
+import { WorkspaceUser } from '../workspace_user/workspaceUser.entity';
 import { CreateWorkspaceDto, UpdateWorkspaceDto } from './workspace.dto';
 
 @Injectable()

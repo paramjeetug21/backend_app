@@ -3,8 +3,7 @@ import { PassportModule } from '@nestjs/passport';
 import { JwtStrategy } from './stretgy/jwt';
 import { Module } from '@nestjs/common';
 import { AuthService } from './auth.service';
-import { UsersService } from 'src/user/user.service';
-import { UsersModule } from 'src/user/user.module';
+import { UsersModule } from '../user/user.module';
 import { AuthController } from './auth.controller';
 import { GoogleStrategy } from './stretgy/google';
 

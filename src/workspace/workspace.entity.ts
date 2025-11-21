@@ -7,9 +7,9 @@ import {
   BelongsTo,
   HasMany,
 } from 'sequelize-typescript';
-import { Document } from 'src/documents/documents.eneity';
-import { User } from 'src/user/user.entity';
-import { WorkspaceUser } from 'src/workspace_user/workspaceUser.entity';
+import { Document } from '../documents/documents.eneity';
+import { User } from '../user/user.entity';
+import { WorkspaceUser } from '../workspace_user/workspaceUser.entity';
 
 @Table({
   tableName: 'workspaces',

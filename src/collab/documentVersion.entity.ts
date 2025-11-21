@@ -1,4 +1,3 @@
-// src/collab/document-version.entity.ts
 import {
   Table,
   Column,
@@ -7,8 +6,8 @@ import {
   ForeignKey,
   BelongsTo,
 } from 'sequelize-typescript';
-import { Document } from 'src/documents/documents.eneity';
-import { User } from 'src/user/user.entity';
+import { Document } from '../documents/documents.eneity';
+import { User } from '../user/user.entity';
 
 @Table({
   tableName: 'document_versions',

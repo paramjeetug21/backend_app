@@ -2,8 +2,8 @@ import { Injectable } from '@nestjs/common';
 import { PassportStrategy } from '@nestjs/passport';
 import { Strategy } from 'passport-google-oauth20';
 import { JwtService } from '@nestjs/jwt';
-import { UsersService } from 'src/user/user.service';
 import { config } from 'dotenv';
+import { UsersService } from 'src/user/user.service';
 config();
 
 @Injectable()

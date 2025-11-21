@@ -6,8 +6,8 @@ import {
   Default,
   HasMany,
 } from 'sequelize-typescript';
-import { Document } from 'src/documents/documents.eneity';
-import { Workspace } from 'src/workspace/workspace.entity';
+import { Document } from '../documents/documents.eneity';
+import { Workspace } from '../workspace/workspace.entity';
 import { WorkspaceUser } from '../workspace_user/workspaceUser.entity';
 
 @Table({

@@ -1,4 +1,3 @@
-// src/documents/documents.gateway.ts
 import {
   WebSocketGateway,
   WebSocketServer,

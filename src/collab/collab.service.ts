@@ -1,6 +1,6 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { InjectModel } from '@nestjs/sequelize';
-import { Document } from 'src/documents/documents.eneity';
+import { Document } from '../documents/documents.eneity';
 import { DocumentVersion } from './documentVersion.entity';
 
 type InMemoryDoc = {

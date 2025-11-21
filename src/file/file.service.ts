@@ -1,7 +1,7 @@
 import { Multer } from 'multer';
 import { Injectable } from '@nestjs/common';
 import * as crypto from 'crypto';
-import { minioClient } from 'src/minio/minio.clints';
+import { minioClient } from '../minio/minio.clints';
 
 @Injectable()
 export class FileService {

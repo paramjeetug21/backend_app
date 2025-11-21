@@ -6,8 +6,8 @@ import {
   ForeignKey,
   BelongsTo,
 } from 'sequelize-typescript';
-import { User } from 'src/user/user.entity';
-import { Workspace } from 'src/workspace/workspace.entity';
+import { User } from '../user/user.entity';
+import { Workspace } from '../workspace/workspace.entity';
 
 @Table({
   tableName: 'documents',

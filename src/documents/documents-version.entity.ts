@@ -6,7 +6,7 @@ import {
   ForeignKey,
   BelongsTo,
 } from 'sequelize-typescript';
-import { User } from 'src/user/user.entity';
+import { User } from '../user/user.entity';
 import { Document } from './documents.eneity';
 
 @Table({
