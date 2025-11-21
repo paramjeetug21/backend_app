@@ -5,9 +5,11 @@ import { Document } from '../documents/documents.eneity';
 import { DocumentVersing } from '../documents/documents-version.entity';
 import { Notification } from '../workspace_user/notification.entity';
 import { User } from '../user/user.entity';
+import pg from 'pg';
 
 const sequelize = new Sequelize({
   dialect: 'postgres',
+  dialectModule: pg,
   host: 'aws-1-ap-southeast-1.pooler.supabase.com',
   port: 5432,
   username: 'postgres.lyoebknxanxqshedtwpr',
