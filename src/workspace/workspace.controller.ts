@@ -11,7 +11,7 @@ import {
 } from '@nestjs/common';
 import { WorkspaceService } from './workspace.service';
 import { CreateWorkspaceDto, UpdateWorkspaceDto } from './workspace.dto';
-import { JwtAuthGuard } from 'src/auth/guard/jwt.guard';
+import { JwtAuthGuard } from '../auth/guard/jwt.guard';
 
 @Controller('workspaces')
 @UseGuards(JwtAuthGuard)

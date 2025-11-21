@@ -13,7 +13,7 @@ import {
 } from '@nestjs/common';
 import { DocumentService } from './documents.service';
 import { CreateDocumentDto, UpdateDocumentDto } from './documents.dto';
-import { JwtAuthGuard } from 'src/auth/guard/jwt.guard';
+import { JwtAuthGuard } from '../auth/guard/jwt.guard';
 
 @Controller('documents')
 @UseGuards(JwtAuthGuard)
@@ -65,16 +65,19 @@ export class DocumentController {
   }
 
   // ➤ Save new version
- @Post(':id/version')
-createVersion(
-  @Param('id') documentId: string,
-  @Body('content') content: string,
-  @Req() req: any, // or a proper type like Request & { user: { id: string } }
-) {
-  const userId = req.user.id; 
-  return this.documentService.saveDocumentWithVersion(documentId, content, userId);
-}
-
+  @Post(':id/version')
+  createVersion(
+    @Param('id') documentId: string,
+    @Body('content') content: string,
+    @Req() req: any, // or a proper type like Request & { user: { id: string } }
+  ) {
+    const userId = req.user.id;
+    return this.documentService.saveDocumentWithVersion(
+      documentId,
+      content,
+      userId,
+    );
+  }
 
   // ➤ Get all versions for a document
   @Get(':id/versions')
