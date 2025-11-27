@@ -7,12 +7,18 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.enableCors({
-    origin: '*', // keep simple for now, Replit works better like this
+    origin: [
+      // optional
+      'http://localhost:5173',
+      'https://frontend-egequ0dvr-paramjeetug21s-projects.vercel.app', // your deployed frontend
+    ],
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    allowedHeaders: 'Content-Type, Authorization',
+    credentials: true,
   });
 
-  const port = process.env.PORT || 3000;
-  await app.listen(port, '0.0.0.0');
-  console.log(`Server running on port ${port}`);
+  await app.listen(3000);
+  console.log('Server running on http://localhost:3000');
 }
 
 bootstrap();
