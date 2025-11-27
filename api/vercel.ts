@@ -7,7 +7,16 @@ async function bootstrapServer() {
   if (!cachedServer) {
     const { AppModule } = require('../dist/src/app.module.js');
     const app = await NestFactory.create(AppModule);
-    app.enableCors();
+
+    // ✅ CORS settings for frontend
+    app.enableCors({
+      origin: [
+        'https://frontend-app-henna-gamma.vercel.app', // deployed frontend
+        'http://localhost:5173', // local frontend
+      ],
+      credentials: true, // needed if sending cookies/auth headers
+    });
+
     await app.init();
     cachedServer = app.getHttpAdapter().getInstance();
   }
