@@ -8,6 +8,9 @@ export class CreateWorkspaceDto {
   name: string;
   @IsEmpty()
   color: string;
+
+  @IsString()
+  description: string;
 }
 
 export class UpdateWorkspaceDto {

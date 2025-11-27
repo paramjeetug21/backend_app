@@ -9,6 +9,7 @@ async function bootstrap() {
   app.enableCors({
     origin: [
       // optional
+      'http://localhost:5173',
       'https://frontend-egequ0dvr-paramjeetug21s-projects.vercel.app', // your deployed frontend
     ],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',

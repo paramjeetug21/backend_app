@@ -36,6 +36,12 @@ export class Workspace extends Model {
   })
   declare color: string;
 
+  @Column({
+    type: DataType.STRING(255),
+    allowNull: false,
+  })
+  declare description: string;
+
   @ForeignKey(() => User)
   @Column({
     type: DataType.UUID,

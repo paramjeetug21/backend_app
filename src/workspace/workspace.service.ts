@@ -15,6 +15,7 @@ export class WorkspaceService {
 
   // Create workspace
   async create(createDto: CreateWorkspaceDto, userId: string) {
+    console.log('dto=====>', createDto);
     const workspace = await this.workspaceModel.create({
       ...createDto,
       createdBy: userId,
